@@ -4,29 +4,35 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+// console.log($('#header'))
+
 !(function($) {
   "use strict";
 
+
   // Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
+    console.log("inside the onclick event")
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       e.preventDefault();
       var target = $(this.hash);
       if (target.length) {
 
-        var scrollto = target.offset().top;
-        var scrolled = 20;
+        var scrollto = target.offset().top + 20;
+        // console.log(scrollto)
+        var scrolled = -30;
 
         if ($('#header').length) {
           scrollto -= $('#header').outerHeight()
-
           if (!$('#header').hasClass('header-scrolled')) {
             scrollto += scrolled;
+            // console.log("this")
           }
         }
 
         if ($(this).attr("href") == '#header') {
           scrollto = 0;
+          // $("add").addClass('active')
         }
 
         $('html, body').animate({
@@ -89,11 +95,14 @@
   var main_nav_height = $('#header').outerHeight();
 
   $(window).on('scroll', function() {
-    var cur_pos = $(this).scrollTop() + 10;
+    var cur_pos = $(this).scrollTop() + 50;
+    // console.log(main_nav_height, "main nav height")
+    // console.log(main_nav, "main_navigation")
 
     nav_sections.each(function() {
-      var top = $(this).offset().top - main_nav_height,
-        bottom = top + $(this).outerHeight();
+      var top = $(this).offset().top - main_nav_height
+      // console.log(top)
+       var bottom = top + $(this).outerHeight();
 
       if (cur_pos >= top && cur_pos <= bottom) {
         if (cur_pos <= bottom) {
