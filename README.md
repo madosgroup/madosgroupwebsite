@@ -1,2 +1,3 @@
-# madosgroupwebsite
-this is mados group website
+# Mados Group website
+
+Get to know us, our services and why us.
