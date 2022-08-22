@@ -138,7 +138,7 @@ submitHandler = (event) => {
         document.querySelector('.sent-message').style.display = 'none'
         document.querySelector('.error-message').style.display = 'none'
 
-
+        var date = new Date
         fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
@@ -147,8 +147,10 @@ submitHandler = (event) => {
                     client: DataTobeBeValidate.name,
                     email: DataTobeBeValidate.email,
                     message: DataTobeBeValidate.message,
-                    company: 'unknown'
-                }
+                    dateandtime : date
+                },
+                email : ["info@madosgroup.com","jamesamuli1998@gmail.com","atibudan2@gmail.com"],
+                template : 'madosgroup'
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",

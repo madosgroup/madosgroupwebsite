@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Mados Group">
+    <meta name="application-name" content="Mados Group">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <title>Template madosgroup</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+            font-style: none;
+            text-decoration: none;
+            color: #1c1c1c;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-color: #f8ecec;
+            /* background-color: ; */
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            /* padding: 1rem 0rem; */
+            background-color: #ffffff;
+            border-radius: .3rem;
+            padding-inline: 2rem;
+            padding-block: 1rem;
+
+        }
+
+        .container h2 {
+            font-size: clamp(1rem, 0.7703rem + 1.0500vw, 1.5rem);
+        }
+
+        .headers_container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            /* align-items: center; */
+            /* padding-block: 1rem; */
+        }
+
+        .headers_container img {
+            width: clamp(3rem, 1.1643rem + 8.3900vw, 7rem);
+            height: clamp(3rem, 1.1643rem + 8.3900vw, 7rem);
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            font-size: clamp(0.8rem, 0.7081rem + 0.4200vw, 1rem);
+            
+        }
+        .message{
+            width: 100%;
+            padding: 1rem 0rem;
+        }.dateandhour{
+            position: relative;
+            bottom: 0;
+            font-size: clamp(0.8rem, 0.7081rem + 0.4200vw, 1rem);
+        }
+    </style>
+
+    <div class="container">
+        <div class="headers_container">
+            <img src="./assets/img/logo2.png" alt="">
+            <!-- <h2>Mados Group</h2> -->
+        </div>
+        <h2>Feed back</h2>
+        <div class="information">
+            <span>
+                From : <b>James Amuli</b>
+            </span>
+            <span>
+                Email : <b>
+                    <a href="mailto:jamesamuli@gmail.com?subject=Acknowledgment of receipt&amp;body=Thank your for mailing us, your concer will be processed!">
+                        jamesamuli@gmail.com
+                    </a>
+                </b>
+            </span>
+
+            <span class="message">
+                <!-- <h4>Message</h4> -->
+                <hr>
+                <br>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic nihil aliquid voluptatum. Deleniti
+                    voluptate qui vel ipsa atque, delectus harum optio cum minima temporibus, ab assumenda eos neque
+                    accusamus! Animi?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic nihil aliquid voluptatum. Deleniti
+                    voluptate qui vel ipsa atque, delectus harum optio cum minima temporibus, ab assumenda eos neque
+             
+                </p>
+            </span>
+
+        </div>
+        <div class="dateandhour">
+            <b id="dateandhour"> </b>
+        </div>
+    </div>
+</body>
+
+</html>
