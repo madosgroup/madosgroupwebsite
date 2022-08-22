@@ -22,7 +22,6 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -37,7 +36,7 @@
 </head>
 
 <body>
-    <section id="topbar" class="d-none d-lg-block">
+    <section id="topbar" class="d-lg-block">
         <div class="container d-flex">
             <div class="contact-info mr-auto d-flex align-items-center">
                 <span>
@@ -75,6 +74,7 @@
             </div>
 
             <nav class="nav-menu">
+
                 <ul>
                     <li class="active add">
                         <a href="#header">Home</a>
@@ -85,8 +85,19 @@
                     <li><a href="#projects">Projects</a></li>
 
                     <li><a href="#contact">Contact Us</a></li>
+                    <li>
+                        <a href="./fr/">
+                            <i class="icofont-globe"></i>
+                            Fr
+                        </a>
+                    </li>
                 </ul>
-            </nav><!-- .nav-menu -->
+            </nav>
+            <button type="button" class="mobile-nav-toggle d-lg-none">
+                <i class="icofont-navigation-menu"></i>
+            </button>
+
+            <!-- .nav-menu -->
         </div>
     </header>
     <!-- End Header -->
@@ -95,9 +106,11 @@
     <section id="hero" class="nopadding">
         <div class="curtain">
             <div class="hero-container" data-aos="fade-up">
-                <h1>Complete software development company and IT services provider</h1>
+                <h1>Software development company and comprehensive IT service provider</h1>
+                <!-- <h1>Full-featured software development company and IT service provider</h1> -->
                 <p>
-                    Break fix it services provider, Software as Service (Saas), Independant Softwaere Vendor, Manage Service Provider (MSP), Value Added Resellers (VAR)
+                    Break fix it services provider, Software as Service (Saas), Independant Softwaere Vendor, Manage
+                    Service Provider (MSP), Value Added Resellers (VAR)
                 </p>
             </div>
         </div>
@@ -147,10 +160,9 @@
                     <div class="text-center">
                         <h3>Join us Now</h3>
                         <p>
-                            If you have been disappointed,the trial is now over. This is the right place you have wonder
-                            to
-                            see. We
-                            care about you and help tou achieve your dreams
+                            If you have been disappointed with the service provided to you in the past...we assure you
+                            that your trial is at its peak...your success is our concern and the realization of your
+                            dreams is our goal. 
                         </p>
                         <!-- <a class="cta-btn" href="#">Call To Action</a> -->
                     </div>
@@ -262,31 +274,47 @@
                     </div>
 
                     <div class="row justify-content-center">
+
                         <div class="col-lg-4">
-                            <div class="box" data-aos="fade-up">
-                                <span>01</span>
-                                <h4>Madoshome</h4>
-                                <p>
-                                    Madoshome is an open platform where you find the house, hotel and tour site that
-                                    suits yours
-                                    needs and where agents, companies and owners
-                                    can publish their houses, hotels and tour sites
-                                </p>
-                            </div>
+                            <a href="https://madoshome.com" target="_blank" rel="noopener noreferrer">
+
+                                <div class="box" data-aos="fade-up">
+                                    <span>01</span>
+                                    <h4>Madoshome</h4>
+                                    <p>
+                                        Madoshome is an open platform where you find the house, hotel and tour site that
+                                        suits yours
+                                        needs and where agents, companies and owners
+                                        can publish their houses, hotels and tour sites
+                                    </p>
+                                    <!-- <span>
+                                        <a target="_blank" href="www.madoshome.com">
+                                            <i class="icofont-arrow-right"></i>
+    
+                                        </a>
+                                    </span> -->
+                                </div>
+                            </a>
+
                         </div>
+
+
                         <div class="col-lg-4">
+                            <a href="#" rel="noopener noreferrer"></a>
                             <div class="box" data-aos="fade-up">
                                 <span>02</span>
                                 <h4>Car tracker</h4>
                                 <p>
                                     We gathers information from the GPS enabled device and compiles it in a myriad of
                                     interesting ways that lend tremendous insight into your business and the operation
-                                    of your vehicles. 
+                                    of your vehicles.
                                     <!-- While GPS vehicle tracking software can deliver all the
-                                    information necessary to determine location, direction, and speed.  -->
+                                        information necessary to determine location, direction, and speed.  -->
                                 </p>
                             </div>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -336,8 +364,10 @@
                     </div>
 
                     <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+                        ,
 
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form class="contact_form" oninput="formData(event)" onsubmit="submitHandler(event)"
+                            autocomplete="off">
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name"
@@ -364,8 +394,8 @@
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
+                                <div class="loading">Sending ...</div>
+                                <div class="error-message">An error occured try again</div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center"><button type="submit">Send Message</button></div>
@@ -386,13 +416,6 @@
     <footer id="footer">
         <div class="footer-top">
             <div class="container">
-
-                <!--div class="row  justify-content-center">
-            <div class="col-lg-6">
-              <h3>Remember</h3>
-              <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-            </div>
-          </div-->
 
                 <div class="row footer-newsletter justify-content-center">
                     <div class="col-lg-6">
@@ -428,7 +451,7 @@
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/php-email-form/index.js"></script>
     <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
     <script src="assets/vendor/venobox/venobox.min.js"></script>
     <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>

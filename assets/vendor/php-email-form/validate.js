@@ -2,16 +2,17 @@ jQuery(document).ready(function($) {
   "use strict";
 
   //Contact
-  $('form.php-email-form').submit(function() {
-   
+  $('form.contact_form').submit(function(e) {
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
     f.children('input').each(function() { // run all inputs
-     
       var i = $(this); // current input
+      // console.log(e.target.value);
+      console.log(this)
       var rule = i.attr('data-rule');
+      
 
       if (rule !== undefined) {
         var ierror = false; // error flag for current input
@@ -89,8 +90,12 @@ jQuery(document).ready(function($) {
         i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
+
+    
     if (ferror) return false;
-    else var str = $(this).serialize();
+    else var str = $(this).target.name;
+
+    // console.log(str, "Data")
 
     var this_form = $(this);
     var action = $(this).attr('action');
@@ -107,7 +112,7 @@ jQuery(document).ready(function($) {
     
     $.ajax({
       type: "POST",
-      url: action,
+      url: "action",
       data: str,
       success: function(msg) {
         if (msg == 'OK') {
