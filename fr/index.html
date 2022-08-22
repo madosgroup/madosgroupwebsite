@@ -109,8 +109,8 @@
                 <h1>
                     Société de développement de logiciels et fournisseur de services informatiques complets </h1>
                 <p>
-                    Fournisseur de services de dépannage, Logiciel en tant que Service (Saas), Fournisseur de Logiciels
-                    Indépendant, Fournisseur de Services Gérés (MSP), Revendeurs à Valeur Ajoutée (VAR).
+                    Fournisseur de services de dépannage, Logiciel en tant que Service, Fournisseur de Logiciels
+                    Indépendant, Fournisseur de Services Gérés, et Revendeurs à Valeur Ajoutée.
                 </p>
             </div>
         </div>
@@ -202,7 +202,7 @@
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Logiciel en tant que Service (SaaS)</a></h4>
+                            <h4><a href="">Logiciel en tant que Service</a></h4>
                             <p>
                                 Nous livrons vos applications sur Internet en tant que service. au lieux d'installer et
                                 maintenir le logiciel, vous y accédez simplement via Internet par notre intermédiaire,
@@ -434,8 +434,9 @@
 
                 <div class="row footer-newsletter justify-content-center">
                     <div class="col-lg-6">
-                        <form action="" method="post">
-                            <input type="email" name="email" placeholder="Entrer votre email"><input type="submit"
+                        <form action="" method="post" onsubmit="submitNewsletter(event)">
+                            <input id="newsletter" type="email" name="email" placeholder="Entrer votre email" required>
+                            <input type="submit"
                                 value="Souscrire">
                         </form>
                     </div>

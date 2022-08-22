@@ -4,7 +4,7 @@ formData = (event) => {
     // event.preventDefault();
     var value = event.target.value;
     var name = event.target.name;
-   
+
     return (DataTobeBeValidate = { ...DataTobeBeValidate, [name]: value.toLowerCase() })
 }
 
@@ -147,10 +147,10 @@ submitHandler = (event) => {
                     client: DataTobeBeValidate.name,
                     email: DataTobeBeValidate.email,
                     message: DataTobeBeValidate.message,
-                    dateandtime : date
+                    dateandtime: date
                 },
-                email : ["info@madosgroup.com","jamesamuli1998@gmail.com","atibudan2@gmail.com"],
-                template : 'madosgroup'
+                email: ["info@madosgroup.com", "jamesamuli1998@gmail.com", "atibudan2@gmail.com"],
+                template: 'madosgroup'
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
@@ -168,6 +168,31 @@ submitHandler = (event) => {
         })
 
     } else {
-        
+
     }
 } 
+
+
+// news letter
+
+submitNewsletter = (event)=>{
+    event.stopPropagation();
+    event.preventDefault();
+
+    var newsLetterData = document.querySelector('#newsletter').value
+
+    fetch("https://newsletterlaravel1.herokuapp.com/api/addmail",{
+        method : "post",
+        body : JSON.stringify({
+            email : newsLetterData,
+            AppCode : "1235b"
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+        },
+    }).then((response) =>{
+        console.log(response.status)
+    }).catch((error)=>{
+        console.log(error)
+    })
+}
