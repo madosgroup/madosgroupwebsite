@@ -152,7 +152,7 @@ submitHandler = (event) => {
         // date = `${date.getDate()}/ ${date.getMonth()}/${date.getFullYear()} at - ${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`
 
         // https://mados-mailer.herokuapp.com/api/mailer/sendmail/
-        fetch("http://192.168.1.100:8000/api/mailer/sendmail/", {
+        fetch("http://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
                 subject: DataTobeBeValidate.subject,
