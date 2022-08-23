@@ -139,15 +139,18 @@ submitHandler = (event) => {
         document.querySelector('.error-message').style.display = 'none'
 
         var date = new Date
-        date = date.toLocaleString('en-US', {
-            weekday: 'short', 
+
+        date.toLocaleString('en-US', {
+            weekday: 'short',
             day: 'numeric',
             year: 'numeric',
-            month: 'long', 
+            month: 'long',
             hour: 'numeric',
             minute: 'numeric',
             second: 'numeric',
-           })
+        })
+        // date = `${date.getDate()}/ ${date.getMonth()}/${date.getFullYear()} at - ${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`
+
         // https://mados-mailer.herokuapp.com/api/mailer/sendmail/
         fetch("http://192.168.1.100:8000/api/mailer/sendmail/", {
             method: "post",
@@ -160,7 +163,7 @@ submitHandler = (event) => {
                     message: DataTobeBeValidate.message,
                     dateandtime: date
                 },
-                email: ["info@madosgroup.com", "jamesamuli1998@gmail.com", "atibudan2@gmail.com","dieudoassumani@madosgroup.com"],
+                email: ["info@madosgroup.com","ndayirukiejean@madosgroup.com", "ndayirukiyemoossa@gmail.com"],
                 template: 'madosgrouptemplate'
             }),
             headers: {
@@ -181,29 +184,29 @@ submitHandler = (event) => {
     } else {
 
     }
-} 
+}
 
 
 // news letter
 
-submitNewsletter = (event)=>{
+submitNewsletter = (event) => {
     event.stopPropagation();
     event.preventDefault();
 
     var newsLetterData = document.querySelector('#newsletter').value
 
-    fetch("https://newsletterlaravel1.herokuapp.com/api/addmail",{
-        method : "post",
-        body : JSON.stringify({
-            email : newsLetterData,
-            AppCode : "1235b"
+    fetch("https://newsletterlaravel1.herokuapp.com/api/addmail", {
+        method: "post",
+        body: JSON.stringify({
+            email: newsLetterData,
+            AppCode: "1235b"
         }),
         headers: {
             "Content-type": "application/json; charset=UTF-8",
         },
-    }).then((response) =>{
+    }).then((response) => {
         console.log(response.status)
-    }).catch((error)=>{
+    }).catch((error) => {
         console.log(error)
     })
 }
