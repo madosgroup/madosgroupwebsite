@@ -98,15 +98,15 @@
             <img src="./assets/img/logo2.png" alt="">
             <!-- <h2>Mados Group</h2> -->
         </div>
-        <h2>Feed back</h2>
+        <h2>{{subject}}</h2>
         <div class="information">
             <span>
-                From : <b>James Amuli</b>
+                From : <b>{{client}}</b>
             </span>
             <span>
                 Email : <b>
                     <a href="mailto:jamesamuli@gmail.com?subject=Acknowledgment of receipt&amp;body=Thank your for mailing us, your concer will be processed!">
-                        jamesamuli@gmail.com
+                        {{email}}
                     </a>
                 </b>
             </span>
@@ -116,18 +116,13 @@
                 <hr>
                 <br>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic nihil aliquid voluptatum. Deleniti
-                    voluptate qui vel ipsa atque, delectus harum optio cum minima temporibus, ab assumenda eos neque
-                    accusamus! Animi?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic nihil aliquid voluptatum. Deleniti
-                    voluptate qui vel ipsa atque, delectus harum optio cum minima temporibus, ab assumenda eos neque
-             
+                    {{message}}
                 </p>
             </span>
 
         </div>
         <div class="dateandhour">
-            <b id="dateandhour"> </b>
+            <b id="dateandhour">{{dateandtime}}</b>
         </div>
     </div>
 </body>
