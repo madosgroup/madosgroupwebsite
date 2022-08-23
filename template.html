@@ -22,9 +22,9 @@
     <title>Template madosgroup</title>
 </head>
 
-<body class="madosgroup_template">
+<body>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -71,7 +71,7 @@
             width: 100%;
         }
 
-        .headers_container_madosgroup > img {
+        .headers_container_madosgroup>img {
             width: clamp(3rem, 1.1643rem + 8.3900vw, 7rem);
             height: clamp(3rem, 1.1643rem + 8.3900vw, 7rem);
         }
@@ -81,50 +81,57 @@
             flex-direction: column;
             gap: .5rem;
             font-size: clamp(0.8rem, 0.7081rem + 0.4200vw, 1rem);
-            
+
         }
-        .message_madosgroup{
+
+        .message_madosgroup {
             width: 100%;
             padding: 1rem 0rem;
-        }.dateandhour_madosgroup{
+        }
+
+        .dateandhour_madosgroup {
             position: relative;
             bottom: 0;
             font-size: clamp(0.8rem, 0.7081rem + 0.4200vw, 1rem);
         }
     </style>
+    <div class="madosgroup_template">
 
-    <div class="container_madosgroup">
-        <div class="headers_container_madosgroup">
-            <img src="https://madosgroup.com/assets/img/logo2.png" alt="">
-            <!-- <h2>Mados Group</h2> -->
-        </div>
-        <h2>{{subject}}</h2>
-        <div class="information_madosgroup">
-            <span>
-                From : <b>{{client}}</b>
-            </span>
-            <span>
-                Email : <b>
-                    <a href="mailto:{{email}}?subject=Acknowledgment of receipt&amp;body=Thank your for mailing us, your concer will be processed!">
-                        {{email}}
-                    </a>
-                </b>
-            </span>
+        <div class="container_madosgroup">
+            <div class="headers_container_madosgroup">
+                <img src="https://madosgroup.com/assets/img/logo2.png" alt="">
+                <!-- <h2>Mados Group</h2> -->
+            </div>
+            <h2>{{subject}}</h2>
+            <div class="information_madosgroup">
+                <span>
+                    From : <b>{{client}}</b>
+                </span>
+                <span>
+                    Email : <b>
+                        <a
+                            href="mailto:{{email}}?subject=Acknowledgment of receipt&amp;body=Thank your for mailing us, your concer will be processed!">
+                            {{email}}
+                        </a>
+                    </b>
+                </span>
 
-            <span class="message_madosgroup">
-                <!-- <h4>Message</h4> -->
-                <hr>
-                <br>
-                <p>
-                    {{message}}
-                </p>
-            </span>
+                <span class="message_madosgroup">
+                    <!-- <h4>Message</h4> -->
+                    <hr>
+                    <br>
+                    <p>
+                        {{message}}
+                    </p>
+                </span>
 
-        </div>
-        <div class="dateandhour_madosgroup">
-            <b id="dateandhour">{{dateandtime}}</b>
+            </div>
+            <div class="dateandhour_madosgroup">
+                <b id="dateandhour">{{dateandtime}}</b>
+            </div>
         </div>
     </div>
+
 </body>
 
 </html>
