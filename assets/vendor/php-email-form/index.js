@@ -139,18 +139,29 @@ submitHandler = (event) => {
         document.querySelector('.error-message').style.display = 'none'
 
         var date = new Date
-        fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
+        date = date.toLocaleString('en-US', {
+            weekday: 'short', 
+            day: 'numeric',
+            year: 'numeric',
+            month: 'long', 
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+           })
+        // https://mados-mailer.herokuapp.com/api/mailer/sendmail/
+        fetch("http://192.168.1.100:8000/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
                 subject: DataTobeBeValidate.subject,
                 variables: {
+                    subject: DataTobeBeValidate.subject,
                     client: DataTobeBeValidate.name,
                     email: DataTobeBeValidate.email,
                     message: DataTobeBeValidate.message,
                     dateandtime: date
                 },
-                email: ["info@madosgroup.com", "jamesamuli1998@gmail.com", "atibudan2@gmail.com"],
-                template: 'madosgroup'
+                email: ["info@madosgroup.com", "jamesamuli1998@gmail.com", "atibudan2@gmail.com","dieudoassumani@madosgroup.com"],
+                template: 'madosgrouptemplate'
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
