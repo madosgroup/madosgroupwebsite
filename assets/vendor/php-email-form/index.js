@@ -195,11 +195,11 @@ submitNewsletter = (event) => {
 
     var newsLetterData = document.querySelector('#newsletter').value
 
-    fetch("https://newsletterlaravel1.herokuapp.com/api/addmail", {
+    fetch("http://newsletterlaravel1.herokuapp.com/api/addmail", {
         method: "post",
         body: JSON.stringify({
             email: newsLetterData,
-            AppCode: "1235b"
+            Appcode: "1245b"
         }),
         headers: {
             "Content-type": "application/json; charset=UTF-8",
