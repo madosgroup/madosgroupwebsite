@@ -77,7 +77,7 @@ submitHandler = (event) => {
                             let validate = actualINput.nextElementSibling
                             validate.style.display = 'none'
 
-                            console.log('passed verification')
+                            // console.log('passed verification')
                         } break;
                     case 'regexp':
                         exp = new RegExp(exp);
@@ -120,7 +120,7 @@ submitHandler = (event) => {
                             let validate = actualINput.nextElementSibling
                             validate.style.display = 'none'
 
-                            console.log('passed verification')
+                            // console.log('passed verification')
                         }
                         break;
                     case 'minlen':
