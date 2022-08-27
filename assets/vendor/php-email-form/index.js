@@ -152,7 +152,7 @@ submitHandler = (event) => {
         // date = `${date.getDate()}/ ${date.getMonth()}/${date.getFullYear()} at - ${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}`
 
         // https://mados-mailer.herokuapp.com/api/mailer/sendmail/
-        fetch("http://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
+        fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
                 subject: DataTobeBeValidate.subject,
@@ -195,7 +195,7 @@ submitNewsletter = (event) => {
 
     var newsLetterData = document.querySelector('#newsletter').value
 
-    fetch("http://newsletterlaravel1.herokuapp.com/api/addmail", {
+    fetch("https://newsletterlaravel1.herokuapp.com/api/addmail", {
         method: "post",
         body: JSON.stringify({
             email: newsLetterData,
